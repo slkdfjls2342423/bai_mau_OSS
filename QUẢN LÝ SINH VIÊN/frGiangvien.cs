@@ -252,5 +252,10 @@ namespace QUẢN_LÝ_SINH_VIÊN
             table = sortedData.CopyToDataTable();
             dgvGiangvien.DataSource = table;
         }
+
+        private void frGiangvien_FormClosing_1(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }
