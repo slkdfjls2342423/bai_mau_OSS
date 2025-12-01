@@ -130,25 +130,9 @@ namespace QUẢN_LÝ_SINH_VIÊN
 
         private void btnDangxuat2_Click(object sender, EventArgs e)
         {
-           
-            List<Form> formsToClose = new List<Form>();
-
-           
-            foreach (Form f in Application.OpenForms)
-            {
-
-                if (f.Name != "frDangnhap")
-                {
-                    formsToClose.Add(f);
-                }
-            }    
-            foreach (Form f in formsToClose)
-            {
-                f.Close();
-            }    
             frDangnhap loginForm = new frDangnhap();
+            this.Hide();
             loginForm.Show();
-            this.Close();
 
         }
 
@@ -334,6 +318,11 @@ namespace QUẢN_LÝ_SINH_VIÊN
 
             table = sortedData.CopyToDataTable();
             dgvQuantri.DataSource = table;
+        }
+
+        private void frQuantri_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

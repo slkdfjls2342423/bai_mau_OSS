@@ -47,31 +47,14 @@ namespace QUẢN_LÝ_SINH_VIÊN
 
         private void btnDangxuat_Click(object sender, EventArgs e)
         {
-            List<Form> formsToClose = new List<Form>();
-
-
-            foreach (Form f in Application.OpenForms)
-            {
-
-                if (f.Name != "frDangnhap")
-                {
-                    formsToClose.Add(f);
-                }
-            }
-            foreach (Form f in formsToClose)
-            {
-                f.Close();
-            }
+          
+          
             frDangnhap loginForm = new frDangnhap();
+            this.Hide();
             loginForm.Show();
-            this.Close();
         }
 
-        private void btndsdk_Click(object sender, EventArgs e)
-        {
-            Frdanhsachdki f = new Frdanhsachdki();
-            f.Show();
-        }
+        
 
         private void frSinhvien_FormClosing(object sender, FormClosingEventArgs e)
         {

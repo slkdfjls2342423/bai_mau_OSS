@@ -131,5 +131,10 @@ namespace QUẢN_LÝ_SINH_VIÊN
                 txtMatkhau.PasswordChar = '•';
             }
         }
+
+        private void frDangnhap_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

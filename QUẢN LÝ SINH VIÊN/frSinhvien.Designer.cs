@@ -34,7 +34,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
-            this.btndsdk = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhvien)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -118,24 +117,11 @@
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             // 
-            // btndsdk
-            // 
-            this.btndsdk.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btndsdk.Location = new System.Drawing.Point(622, 10);
-            this.btndsdk.Margin = new System.Windows.Forms.Padding(2);
-            this.btndsdk.Name = "btndsdk";
-            this.btndsdk.Size = new System.Drawing.Size(128, 34);
-            this.btndsdk.TabIndex = 5;
-            this.btndsdk.Text = "Danh sách đki";
-            this.btndsdk.UseVisualStyleBackColor = true;
-            this.btndsdk.Click += new System.EventHandler(this.btndsdk_Click);
-            // 
             // frSinhvien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(816, 536);
-            this.Controls.Add(this.btndsdk);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -162,6 +148,5 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Button btndsdk;
     }
 }

@@ -28,22 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvGiangvien = new System.Windows.Forms.DataGridView();
-            this.mSSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tenSVDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lopDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gioiTinhDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mon1DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mon2DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.mon3DataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.diemBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLSinhVienDataSet = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSet();
             this.GrbDSSV = new System.Windows.Forms.GroupBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
             this.BTNDangXuat = new System.Windows.Forms.Button();
-            this.diemTableAdapter = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSetTableAdapters.DiemTableAdapter();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
@@ -66,8 +55,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.cbtieuchisx = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiangvien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet)).BeginInit();
             this.GrbDSSV.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -75,19 +62,9 @@
             // 
             // dgvGiangvien
             // 
-            this.dgvGiangvien.AutoGenerateColumns = false;
             this.dgvGiangvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGiangvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.mSSVDataGridViewTextBoxColumn,
-            this.tenSVDataGridViewTextBoxColumn,
-            this.lopDataGridViewTextBoxColumn,
-            this.gioiTinhDataGridViewTextBoxColumn,
-            this.mon1DataGridViewTextBoxColumn,
-            this.mon2DataGridViewTextBoxColumn,
-            this.mon3DataGridViewTextBoxColumn});
-            this.dgvGiangvien.DataSource = this.diemBindingSource;
             this.dgvGiangvien.Location = new System.Drawing.Point(14, 17);
-            this.dgvGiangvien.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dgvGiangvien.Margin = new System.Windows.Forms.Padding(2);
             this.dgvGiangvien.Name = "dgvGiangvien";
             this.dgvGiangvien.RowTemplate.Height = 24;
             this.dgvGiangvien.Size = new System.Drawing.Size(744, 228);
@@ -96,65 +73,13 @@
             this.dgvGiangvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiangvien_CellContentClick);
             this.dgvGiangvien.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvGiangvien_CellContentClick);
             // 
-            // mSSVDataGridViewTextBoxColumn
-            // 
-            this.mSSVDataGridViewTextBoxColumn.DataPropertyName = "MSSV";
-            this.mSSVDataGridViewTextBoxColumn.HeaderText = "MSSV";
-            this.mSSVDataGridViewTextBoxColumn.Name = "mSSVDataGridViewTextBoxColumn";
-            // 
-            // tenSVDataGridViewTextBoxColumn
-            // 
-            this.tenSVDataGridViewTextBoxColumn.DataPropertyName = "TenSV";
-            this.tenSVDataGridViewTextBoxColumn.HeaderText = "TenSV";
-            this.tenSVDataGridViewTextBoxColumn.Name = "tenSVDataGridViewTextBoxColumn";
-            // 
-            // lopDataGridViewTextBoxColumn
-            // 
-            this.lopDataGridViewTextBoxColumn.DataPropertyName = "Lop";
-            this.lopDataGridViewTextBoxColumn.HeaderText = "Lop";
-            this.lopDataGridViewTextBoxColumn.Name = "lopDataGridViewTextBoxColumn";
-            // 
-            // gioiTinhDataGridViewTextBoxColumn
-            // 
-            this.gioiTinhDataGridViewTextBoxColumn.DataPropertyName = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.HeaderText = "GioiTinh";
-            this.gioiTinhDataGridViewTextBoxColumn.Name = "gioiTinhDataGridViewTextBoxColumn";
-            // 
-            // mon1DataGridViewTextBoxColumn
-            // 
-            this.mon1DataGridViewTextBoxColumn.DataPropertyName = "Mon1";
-            this.mon1DataGridViewTextBoxColumn.HeaderText = "Mon1";
-            this.mon1DataGridViewTextBoxColumn.Name = "mon1DataGridViewTextBoxColumn";
-            // 
-            // mon2DataGridViewTextBoxColumn
-            // 
-            this.mon2DataGridViewTextBoxColumn.DataPropertyName = "Mon2";
-            this.mon2DataGridViewTextBoxColumn.HeaderText = "Mon2";
-            this.mon2DataGridViewTextBoxColumn.Name = "mon2DataGridViewTextBoxColumn";
-            // 
-            // mon3DataGridViewTextBoxColumn
-            // 
-            this.mon3DataGridViewTextBoxColumn.DataPropertyName = "Mon3";
-            this.mon3DataGridViewTextBoxColumn.HeaderText = "Mon3";
-            this.mon3DataGridViewTextBoxColumn.Name = "mon3DataGridViewTextBoxColumn";
-            // 
-            // diemBindingSource
-            // 
-            this.diemBindingSource.DataMember = "Diem";
-            this.diemBindingSource.DataSource = this.qLSinhVienDataSet;
-            // 
-            // qLSinhVienDataSet
-            // 
-            this.qLSinhVienDataSet.DataSetName = "QLSinhVienDataSet";
-            this.qLSinhVienDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // GrbDSSV
             // 
             this.GrbDSSV.Controls.Add(this.dgvGiangvien);
             this.GrbDSSV.Location = new System.Drawing.Point(9, 55);
-            this.GrbDSSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrbDSSV.Margin = new System.Windows.Forms.Padding(2);
             this.GrbDSSV.Name = "GrbDSSV";
-            this.GrbDSSV.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.GrbDSSV.Padding = new System.Windows.Forms.Padding(2);
             this.GrbDSSV.Size = new System.Drawing.Size(772, 258);
             this.GrbDSSV.TabIndex = 1;
             this.GrbDSSV.TabStop = false;
@@ -163,9 +88,9 @@
             // 
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(9, 20);
-            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox1.Size = new System.Drawing.Size(772, 41);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
@@ -188,7 +113,7 @@
             this.BTNDangXuat.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNDangXuat.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.BTNDangXuat.Location = new System.Drawing.Point(695, 440);
-            this.BTNDangXuat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BTNDangXuat.Margin = new System.Windows.Forms.Padding(2);
             this.BTNDangXuat.Name = "BTNDangXuat";
             this.BTNDangXuat.Size = new System.Drawing.Size(72, 30);
             this.BTNDangXuat.TabIndex = 0;
@@ -196,16 +121,12 @@
             this.BTNDangXuat.UseVisualStyleBackColor = false;
             this.BTNDangXuat.Click += new System.EventHandler(this.BTNDangXuat_Click);
             // 
-            // diemTableAdapter
-            // 
-            this.diemTableAdapter.ClearBeforeFill = true;
-            // 
             // btnThem
             // 
             this.btnThem.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnThem.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnThem.Location = new System.Drawing.Point(695, 331);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThem.Margin = new System.Windows.Forms.Padding(2);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(72, 29);
             this.btnThem.TabIndex = 4;
@@ -218,7 +139,7 @@
             this.btnSua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSua.ForeColor = System.Drawing.SystemColors.WindowFrame;
             this.btnSua.Location = new System.Drawing.Point(694, 368);
-            this.btnSua.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnSua.Margin = new System.Windows.Forms.Padding(2);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(74, 29);
             this.btnSua.TabIndex = 5;
@@ -245,9 +166,9 @@
             this.groupBox3.Controls.Add(this.label2);
             this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox3.Location = new System.Drawing.Point(9, 318);
-            this.groupBox3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Margin = new System.Windows.Forms.Padding(2);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox3.Padding = new System.Windows.Forms.Padding(2);
             this.groupBox3.Size = new System.Drawing.Size(479, 152);
             this.groupBox3.TabIndex = 6;
             this.groupBox3.TabStop = false;
@@ -255,7 +176,7 @@
             // txtTimlop
             // 
             this.txtTimlop.Location = new System.Drawing.Point(106, 27);
-            this.txtTimlop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTimlop.Margin = new System.Windows.Forms.Padding(2);
             this.txtTimlop.Name = "txtTimlop";
             this.txtTimlop.Size = new System.Drawing.Size(86, 21);
             this.txtTimlop.TabIndex = 14;
@@ -263,7 +184,7 @@
             // btnTimlop
             // 
             this.btnTimlop.Location = new System.Drawing.Point(210, 23);
-            this.btnTimlop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnTimlop.Margin = new System.Windows.Forms.Padding(2);
             this.btnTimlop.Name = "btnTimlop";
             this.btnTimlop.Size = new System.Drawing.Size(56, 28);
             this.btnTimlop.TabIndex = 13;
@@ -275,7 +196,7 @@
             // 
             this.cbTimLop.AutoSize = true;
             this.cbTimLop.Location = new System.Drawing.Point(14, 28);
-            this.cbTimLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbTimLop.Margin = new System.Windows.Forms.Padding(2);
             this.cbTimLop.Name = "cbTimLop";
             this.cbTimLop.Size = new System.Drawing.Size(94, 19);
             this.cbTimLop.TabIndex = 12;
@@ -286,7 +207,7 @@
             // txtLop
             // 
             this.txtLop.Location = new System.Drawing.Point(106, 122);
-            this.txtLop.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLop.Margin = new System.Windows.Forms.Padding(2);
             this.txtLop.Name = "txtLop";
             this.txtLop.Size = new System.Drawing.Size(162, 21);
             this.txtLop.TabIndex = 11;
@@ -294,7 +215,7 @@
             // txtTenSV
             // 
             this.txtTenSV.Location = new System.Drawing.Point(106, 92);
-            this.txtTenSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenSV.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenSV.Name = "txtTenSV";
             this.txtTenSV.Size = new System.Drawing.Size(162, 21);
             this.txtTenSV.TabIndex = 10;
@@ -302,7 +223,7 @@
             // txtMSSV
             // 
             this.txtMSSV.Location = new System.Drawing.Point(106, 59);
-            this.txtMSSV.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMSSV.Margin = new System.Windows.Forms.Padding(2);
             this.txtMSSV.Name = "txtMSSV";
             this.txtMSSV.Size = new System.Drawing.Size(162, 21);
             this.txtMSSV.TabIndex = 9;
@@ -340,7 +261,7 @@
             // txtmon3
             // 
             this.txtmon3.Location = new System.Drawing.Point(382, 120);
-            this.txtmon3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmon3.Margin = new System.Windows.Forms.Padding(2);
             this.txtmon3.Name = "txtmon3";
             this.txtmon3.Size = new System.Drawing.Size(77, 21);
             this.txtmon3.TabIndex = 5;
@@ -348,7 +269,7 @@
             // txtmon2
             // 
             this.txtmon2.Location = new System.Drawing.Point(382, 92);
-            this.txtmon2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmon2.Margin = new System.Windows.Forms.Padding(2);
             this.txtmon2.Name = "txtmon2";
             this.txtmon2.Size = new System.Drawing.Size(77, 21);
             this.txtmon2.TabIndex = 4;
@@ -356,7 +277,7 @@
             // txtmon1
             // 
             this.txtmon1.Location = new System.Drawing.Point(382, 59);
-            this.txtmon1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtmon1.Margin = new System.Windows.Forms.Padding(2);
             this.txtmon1.Name = "txtmon1";
             this.txtmon1.Size = new System.Drawing.Size(77, 21);
             this.txtmon1.TabIndex = 3;
@@ -396,7 +317,7 @@
             this.btnKhoitao.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnKhoitao.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
             this.btnKhoitao.Location = new System.Drawing.Point(695, 405);
-            this.btnKhoitao.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnKhoitao.Margin = new System.Windows.Forms.Padding(2);
             this.btnKhoitao.Name = "btnKhoitao";
             this.btnKhoitao.Size = new System.Drawing.Size(72, 29);
             this.btnKhoitao.TabIndex = 7;
@@ -424,7 +345,7 @@
             "Lớp",
             "Điểm TB"});
             this.cbtieuchisx.Location = new System.Drawing.Point(576, 337);
-            this.cbtieuchisx.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbtieuchisx.Margin = new System.Windows.Forms.Padding(2);
             this.cbtieuchisx.Name = "cbtieuchisx";
             this.cbtieuchisx.Size = new System.Drawing.Size(83, 21);
             this.cbtieuchisx.TabIndex = 9;
@@ -444,14 +365,12 @@
             this.Controls.Add(this.btnThem);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.GrbDSSV);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frGiangvien";
             this.Text = "Danh Sách Sinh Viên";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frGiangvien_FormClosing_1);
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frGiangvien_FormClosed);
             this.Load += new System.EventHandler(this.frGiangvien_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvGiangvien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.diemBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet)).EndInit();
             this.GrbDSSV.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
@@ -469,16 +388,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button BTNDangXuat;
-        private QLSinhVienDataSet qLSinhVienDataSet;
-        private System.Windows.Forms.BindingSource diemBindingSource;
-        private QLSinhVienDataSetTableAdapters.DiemTableAdapter diemTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mSSVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn tenSVDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lopDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn gioiTinhDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mon1DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mon2DataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn mon3DataGridViewTextBoxColumn;
         private System.Windows.Forms.Button btnThem;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.GroupBox groupBox3;

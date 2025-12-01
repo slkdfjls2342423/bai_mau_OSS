@@ -47,50 +47,52 @@
             // txtTenDN
             // 
             this.txtTenDN.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTenDN.Location = new System.Drawing.Point(229, 174);
+            this.txtTenDN.Location = new System.Drawing.Point(172, 141);
+            this.txtTenDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtTenDN.Name = "txtTenDN";
-            this.txtTenDN.Size = new System.Drawing.Size(316, 27);
+            this.txtTenDN.Size = new System.Drawing.Size(238, 23);
             this.txtTenDN.TabIndex = 0;
             // 
             // txtMatkhau
             // 
             this.txtMatkhau.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtMatkhau.Location = new System.Drawing.Point(229, 216);
+            this.txtMatkhau.Location = new System.Drawing.Point(172, 176);
+            this.txtMatkhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtMatkhau.Name = "txtMatkhau";
             this.txtMatkhau.PasswordChar = '•';
-            this.txtMatkhau.Size = new System.Drawing.Size(316, 27);
+            this.txtMatkhau.Size = new System.Drawing.Size(238, 23);
             this.txtMatkhau.TabIndex = 1;
-
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 174);
+            this.label1.Location = new System.Drawing.Point(59, 141);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(119, 20);
+            this.label1.Size = new System.Drawing.Size(105, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "Tên đăng nhập";
-
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(79, 219);
+            this.label2.Location = new System.Drawing.Point(59, 178);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 20);
+            this.label2.Size = new System.Drawing.Size(66, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "Mật khẩu";
-
             // 
             // btnDangnhap
             // 
             this.btnDangnhap.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnDangnhap.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnDangnhap.Location = new System.Drawing.Point(226, 299);
+            this.btnDangnhap.Location = new System.Drawing.Point(170, 243);
+            this.btnDangnhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDangnhap.Name = "btnDangnhap";
-            this.btnDangnhap.Size = new System.Drawing.Size(130, 42);
+            this.btnDangnhap.Size = new System.Drawing.Size(98, 34);
             this.btnDangnhap.TabIndex = 2;
             this.btnDangnhap.Text = "Đăng Nhập";
             this.btnDangnhap.UseVisualStyleBackColor = false;
@@ -117,9 +119,11 @@
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.groupBox1.Location = new System.Drawing.Point(16, 52);
+            this.groupBox1.Location = new System.Drawing.Point(12, 42);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(592, 367);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.groupBox1.Size = new System.Drawing.Size(444, 298);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             // 
@@ -128,18 +132,20 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.label4.Location = new System.Drawing.Point(211, 23);
+            this.label4.Location = new System.Drawing.Point(158, 19);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(163, 32);
+            this.label4.Size = new System.Drawing.Size(127, 26);
             this.label4.TabIndex = 11;
             this.label4.Text = "Đăng nhập";
             // 
             // cbhtmk
             // 
             this.cbhtmk.AutoSize = true;
-            this.cbhtmk.Location = new System.Drawing.Point(229, 269);
+            this.cbhtmk.Location = new System.Drawing.Point(172, 219);
+            this.cbhtmk.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbhtmk.Name = "cbhtmk";
-            this.cbhtmk.Size = new System.Drawing.Size(162, 24);
+            this.cbhtmk.Size = new System.Drawing.Size(137, 21);
             this.cbhtmk.TabIndex = 10;
             this.cbhtmk.Text = "Hiển thị mật khẩu";
             this.cbhtmk.UseVisualStyleBackColor = true;
@@ -151,9 +157,10 @@
             this.LoiVaiTro.AutoSize = true;
             this.LoiVaiTro.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoiVaiTro.ForeColor = System.Drawing.Color.Red;
-            this.LoiVaiTro.Location = new System.Drawing.Point(38, 132);
+            this.LoiVaiTro.Location = new System.Drawing.Point(28, 107);
+            this.LoiVaiTro.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LoiVaiTro.Name = "LoiVaiTro";
-            this.LoiVaiTro.Size = new System.Drawing.Size(35, 36);
+            this.LoiVaiTro.Size = new System.Drawing.Size(29, 29);
             this.LoiVaiTro.TabIndex = 9;
             this.LoiVaiTro.Text = " *";
             // 
@@ -163,9 +170,10 @@
             this.Thongbaoloi.AutoSize = true;
             this.Thongbaoloi.BackColor = System.Drawing.Color.Transparent;
             this.Thongbaoloi.ForeColor = System.Drawing.Color.Red;
-            this.Thongbaoloi.Location = new System.Drawing.Point(222, 246);
+            this.Thongbaoloi.Location = new System.Drawing.Point(166, 200);
+            this.Thongbaoloi.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.Thongbaoloi.Name = "Thongbaoloi";
-            this.Thongbaoloi.Size = new System.Drawing.Size(323, 20);
+            this.Thongbaoloi.Size = new System.Drawing.Size(281, 17);
             this.Thongbaoloi.TabIndex = 8;
             this.Thongbaoloi.Text = "Tên đăng nhập hoặc mật khẩu không đúng";
             // 
@@ -173,9 +181,10 @@
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 135);
+            this.label3.Location = new System.Drawing.Point(59, 110);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(175, 20);
+            this.label3.Size = new System.Drawing.Size(150, 17);
             this.label3.TabIndex = 7;
             this.label3.Text = "Đăng nhập với tư cách";
             // 
@@ -183,23 +192,24 @@
             // 
             this.cbVaitro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.cbVaitro.FormattingEnabled = true;
-            this.cbVaitro.Items.AddRange(new string[] {
+            this.cbVaitro.Items.AddRange(new object[] {
             "Sinh viên",
             "Giảng viên",
             "Quản trị"});
-            this.cbVaitro.Location = new System.Drawing.Point(415, 132);
+            this.cbVaitro.Location = new System.Drawing.Point(311, 107);
+            this.cbVaitro.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.cbVaitro.Name = "cbVaitro";
-            this.cbVaitro.Size = new System.Drawing.Size(130, 28);
+            this.cbVaitro.Size = new System.Drawing.Size(98, 25);
             this.cbVaitro.TabIndex = 6;
-
             // 
             // btnThoat
             // 
             this.btnThoat.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btnThoat.BackColor = System.Drawing.SystemColors.ControlLight;
-            this.btnThoat.Location = new System.Drawing.Point(453, 299);
+            this.btnThoat.Location = new System.Drawing.Point(340, 243);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnThoat.Name = "btnThoat";
-            this.btnThoat.Size = new System.Drawing.Size(92, 42);
+            this.btnThoat.Size = new System.Drawing.Size(69, 34);
             this.btnThoat.TabIndex = 3;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = false;
@@ -207,13 +217,15 @@
             // 
             // frDangnhap
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(620, 468);
+            this.ClientSize = new System.Drawing.Size(465, 380);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frDangnhap";
             this.Text = "Đăng nhập";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frDangnhap_FormClosed);
             this.Load += new System.EventHandler(this.frDangnhap_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

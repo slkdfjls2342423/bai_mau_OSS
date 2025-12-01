@@ -17,11 +17,29 @@ namespace QUẢN_LÝ_SINH_VIÊN
         SqlConnection connection;
         SqlCommand command;
         List<DataRow> sortedData = new List<DataRow>();
-        //string str = "Data Source=LAPTOP-RKMHJCM2\\MAY1; Initial Catalog=QLSinhVien; Integrated Security=True";
 
         SqlDataAdapter adapter = new SqlDataAdapter();
         DataTable table = new DataTable();
 
+        private void frGiangvien_Load_1(object sender, EventArgs e)
+        {
+            if (connection == null)
+            {
+                connection = new SqlConnection(Program.conStr);
+            }
+            if (connection.State != ConnectionState.Open)
+            {
+                connection.Open();
+            }
+            command = connection.CreateCommand();
+            command.CommandText = " SELECT * FROM Diem";
+            adapter.SelectCommand = command;
+            table.Clear();
+            adapter.Fill(table);
+            dgvGiangvien.DataSource = table;
+            dgvGiangvien.ReadOnly = true;
+            loaddata();
+        }
 
         void loaddata()
         {
@@ -80,29 +98,10 @@ namespace QUẢN_LÝ_SINH_VIÊN
         {
 
             frDangnhap loginForm = new frDangnhap();
-
-
+            this.Hide();
             loginForm.Show();
-
-
-            this.Close();
         }
 
-        private void frGiangvien_Load_1(object sender, EventArgs e)
-        {
-            this.diemTableAdapter.Fill(this.qLSinhVienDataSet.Diem);
-            if (connection == null)
-            {
-                connection = new SqlConnection(Program.conStr);
-            }
-
-            if (connection.State != ConnectionState.Open)
-            {
-                connection.Open();
-            }
-            dgvGiangvien.ReadOnly = true;
-            loaddata();
-        }
 
 
         private void btnThem_Click(object sender, EventArgs e)
@@ -253,7 +252,7 @@ namespace QUẢN_LÝ_SINH_VIÊN
             dgvGiangvien.DataSource = table;
         }
 
-        private void frGiangvien_FormClosing_1(object sender, FormClosingEventArgs e)
+        private void frGiangvien_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
         }

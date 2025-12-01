@@ -52,12 +52,6 @@
     <Compile Include="frDangnhap.Designer.cs">
       <DependentUpon>frDangnhap.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frdanhsachdki.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Frdanhsachdki.Designer.cs">
-      <DependentUpon>Frdanhsachdki.cs</DependentUpon>
-    </Compile>
     <Compile Include="frGiangvien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +106,6 @@
     </Compile>
     <EmbeddedResource Include="frDangnhap.resx">
       <DependentUpon>frDangnhap.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Frdanhsachdki.resx">
-      <DependentUpon>Frdanhsachdki.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frGiangvien.resx">
       <DependentUpon>frGiangvien.cs</DependentUpon>
