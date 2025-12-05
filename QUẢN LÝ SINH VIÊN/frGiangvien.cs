@@ -185,7 +185,16 @@ namespace QUẢN_LÝ_SINH_VIÊN
             }
 
 
-            table = data.CopyToDataTable();
+            if (sortedData.Count > 0)
+            {
+                table = sortedData.CopyToDataTable();
+                dgvGiangvien.DataSource = table;
+            }
+            else
+            {
+                // Nếu không có dữ liệu, gán DataSource về null để làm trống bảng hiển thị
+                dgvGiangvien.DataSource = null;
+            };
         }
 
         private void btnTimlop_Click(object sender, EventArgs e)

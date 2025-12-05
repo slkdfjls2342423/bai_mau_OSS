@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
-            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.dgvtkgv = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.qLSinhVienDataSet2 = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSet2();
-            this.lecturersBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.lecturersTableAdapter = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSet2TableAdapters.LecturersTableAdapter();
-            this.lecturerIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnThem = new System.Windows.Forms.Button();
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
@@ -51,11 +43,8 @@
             this.txtusername = new System.Windows.Forms.TextBox();
             this.txtpassword = new System.Windows.Forms.TextBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtkgv)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).BeginInit();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -70,11 +59,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // fileSystemWatcher1
-            // 
-            this.fileSystemWatcher1.EnableRaisingEvents = true;
-            this.fileSystemWatcher1.SynchronizingObject = this;
-            // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvtkgv);
@@ -86,13 +70,7 @@
             // 
             // dgvtkgv
             // 
-            this.dgvtkgv.AutoGenerateColumns = false;
             this.dgvtkgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtkgv.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.lecturerIDDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
-            this.dgvtkgv.DataSource = this.lecturersBindingSource;
             this.dgvtkgv.Location = new System.Drawing.Point(16, 21);
             this.dgvtkgv.Name = "dgvtkgv";
             this.dgvtkgv.RowTemplate.Height = 24;
@@ -112,39 +90,6 @@
             this.label1.Size = new System.Drawing.Size(245, 24);
             this.label1.TabIndex = 2;
             this.label1.Text = "TÀI KHOẢN GIẢNG VIÊN";
-            // 
-            // qLSinhVienDataSet2
-            // 
-            this.qLSinhVienDataSet2.DataSetName = "QLSinhVienDataSet2";
-            this.qLSinhVienDataSet2.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // lecturersBindingSource
-            // 
-            this.lecturersBindingSource.DataMember = "Lecturers";
-            this.lecturersBindingSource.DataSource = this.qLSinhVienDataSet2;
-            // 
-            // lecturersTableAdapter
-            // 
-            this.lecturersTableAdapter.ClearBeforeFill = true;
-            // 
-            // lecturerIDDataGridViewTextBoxColumn
-            // 
-            this.lecturerIDDataGridViewTextBoxColumn.DataPropertyName = "LecturerID";
-            this.lecturerIDDataGridViewTextBoxColumn.HeaderText = "LecturerID";
-            this.lecturerIDDataGridViewTextBoxColumn.Name = "lecturerIDDataGridViewTextBoxColumn";
-            this.lecturerIDDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
             // 
             // btnThem
             // 
@@ -267,12 +212,9 @@
             this.Controls.Add(this.button1);
             this.Name = "frtaikhoanGV";
             this.Text = "frtaikhoanGV";
-            this.Load += new System.EventHandler(this.frtaikhoanGV_Load_1);
-            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.Load += new System.EventHandler(this.frtaikhoanGV_Load);
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvtkgv)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.lecturersBindingSource)).EndInit();
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
@@ -283,16 +225,9 @@
         #endregion
 
         private System.Windows.Forms.Button button1;
-        private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvtkgv;
         private System.Windows.Forms.Label label1;
-        private QLSinhVienDataSet2 qLSinhVienDataSet2;
-        private System.Windows.Forms.BindingSource lecturersBindingSource;
-        private QLSinhVienDataSet2TableAdapters.LecturersTableAdapter lecturersTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn lecturerIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtpassword;
         private System.Windows.Forms.Label Lecturers;

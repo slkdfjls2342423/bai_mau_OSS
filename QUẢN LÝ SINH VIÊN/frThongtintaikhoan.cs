@@ -61,8 +61,6 @@ namespace QUẢN_LÝ_SINH_VIÊN
 
         private void frThongtintaikhoan_Load_1(object sender, EventArgs e)
         {
-            
-            this.studentsTableAdapter.Fill(this.qLSinhVienDataSet1.Students);
             if (connection == null)
             {
                 connection = new SqlConnection(Program.conStr);
@@ -83,8 +81,7 @@ namespace QUẢN_LÝ_SINH_VIÊN
             try
             {
                 command = connection.CreateCommand();
-                command.CommandText = "INSERT INTO Students (StudentID, Username, Password) VALUES (@StudentID, @Username, @Password)";
-                command.Parameters.AddWithValue("@StudentID", txtstudentid.Text);
+                command.CommandText = "INSERT INTO Students ( Username, Password) VALUES ( @Username, @Password)";
                 command.Parameters.AddWithValue("@Username", txtusername.Text);
                 command.Parameters.AddWithValue("@Password", txtpassword.Text);
                 command.ExecuteNonQuery();

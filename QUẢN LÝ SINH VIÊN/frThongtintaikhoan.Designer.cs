@@ -28,17 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.btnThoattk = new System.Windows.Forms.Button();
             this.dgvtaikhoansinhvien = new System.Windows.Forms.DataGridView();
-            this.studentIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.usernameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.passwordDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.studentsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.qLSinhVienDataSet1 = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSet1();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.studentsTableAdapter = new QUẢN_LÝ_SINH_VIÊN.QLSinhVienDataSet1TableAdapters.StudentsTableAdapter();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -54,8 +47,6 @@
             this.txttimMSSV = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvtaikhoansinhvien)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -74,13 +65,7 @@
             // 
             // dgvtaikhoansinhvien
             // 
-            this.dgvtaikhoansinhvien.AutoGenerateColumns = false;
             this.dgvtaikhoansinhvien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvtaikhoansinhvien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.studentIDDataGridViewTextBoxColumn,
-            this.usernameDataGridViewTextBoxColumn,
-            this.passwordDataGridViewTextBoxColumn});
-            this.dgvtaikhoansinhvien.DataSource = this.studentsBindingSource;
             this.dgvtaikhoansinhvien.Location = new System.Drawing.Point(15, 21);
             this.dgvtaikhoansinhvien.Name = "dgvtaikhoansinhvien";
             this.dgvtaikhoansinhvien.RowTemplate.Height = 24;
@@ -89,34 +74,6 @@
             this.dgvtaikhoansinhvien.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtaikhoansinhvien_CellContentClick);
             this.dgvtaikhoansinhvien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtaikhoansinhvien_CellContentClick);
             this.dgvtaikhoansinhvien.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvtaikhoansinhvien_CellContentClick);
-            // 
-            // studentIDDataGridViewTextBoxColumn
-            // 
-            this.studentIDDataGridViewTextBoxColumn.DataPropertyName = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.HeaderText = "StudentID";
-            this.studentIDDataGridViewTextBoxColumn.Name = "studentIDDataGridViewTextBoxColumn";
-            // 
-            // usernameDataGridViewTextBoxColumn
-            // 
-            this.usernameDataGridViewTextBoxColumn.DataPropertyName = "Username";
-            this.usernameDataGridViewTextBoxColumn.HeaderText = "Username";
-            this.usernameDataGridViewTextBoxColumn.Name = "usernameDataGridViewTextBoxColumn";
-            // 
-            // passwordDataGridViewTextBoxColumn
-            // 
-            this.passwordDataGridViewTextBoxColumn.DataPropertyName = "Password";
-            this.passwordDataGridViewTextBoxColumn.HeaderText = "Password";
-            this.passwordDataGridViewTextBoxColumn.Name = "passwordDataGridViewTextBoxColumn";
-            // 
-            // studentsBindingSource
-            // 
-            this.studentsBindingSource.DataMember = "Students";
-            this.studentsBindingSource.DataSource = this.qLSinhVienDataSet1;
-            // 
-            // qLSinhVienDataSet1
-            // 
-            this.qLSinhVienDataSet1.DataSetName = "QLSinhVienDataSet1";
-            this.qLSinhVienDataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -138,10 +95,6 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "TÀI KHOẢN SINH VIÊN";
             // 
-            // studentsTableAdapter
-            // 
-            this.studentsTableAdapter.ClearBeforeFill = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -150,7 +103,6 @@
             this.label2.Size = new System.Drawing.Size(70, 17);
             this.label2.TabIndex = 5;
             this.label2.Text = "StudentID";
-
             // 
             // label3
             // 
@@ -295,8 +247,6 @@
             this.Text = "frThongtintaikhoan";
             this.Load += new System.EventHandler(this.frThongtintaikhoan_Load_1);
             ((System.ComponentModel.ISupportInitialize)(this.dgvtaikhoansinhvien)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.studentsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.qLSinhVienDataSet1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -312,12 +262,6 @@
         private System.Windows.Forms.DataGridView dgvtaikhoansinhvien;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
-        private QLSinhVienDataSet1 qLSinhVienDataSet1;
-        private System.Windows.Forms.BindingSource studentsBindingSource;
-        private QLSinhVienDataSet1TableAdapters.StudentsTableAdapter studentsTableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn studentIDDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn usernameDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn passwordDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;

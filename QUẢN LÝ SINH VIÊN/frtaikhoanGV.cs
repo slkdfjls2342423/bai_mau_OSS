@@ -73,21 +73,6 @@ namespace QUẢN_LÝ_SINH_VIÊN
                 txtpassword.Text = dgvtkgv.Rows[i].Cells[2].Value.ToString();
             }
         }
-
-        private void frtaikhoanGV_Load_1(object sender, EventArgs e)
-        {
-            this.lecturersTableAdapter.Fill(this.qLSinhVienDataSet2.Lecturers);
-            if (connection == null)
-            {
-                connection = new SqlConnection(Program.conStr);
-            }
-
-          
-            if (connection.State != ConnectionState.Open)
-            {
-                connection.Open();
-            }
-        }
         private void btnThem_Click(object sender, EventArgs e)
         {          
             command = connection.CreateCommand();
@@ -117,9 +102,12 @@ namespace QUẢN_LÝ_SINH_VIÊN
             command.Parameters.AddWithValue("@LecturerID", txtlecturerid.Text);
             command.Parameters.AddWithValue("@Username", txtusername.Text);
             command.Parameters.AddWithValue("@Password", txtpassword.Text);
-            command.ExecuteNonQuery();
+            int rows = command.ExecuteNonQuery();
             loaddata(); 
-            MessageBox.Show("Sửa thông tin thành công!");
+            if(rows>0)
+                MessageBox.Show("Sửa thông tin thành công!");
+            else
+                MessageBox.Show("Sửa thông tin thất bại!");
         }
 
         private void btnXoa_Click(object sender, EventArgs e)

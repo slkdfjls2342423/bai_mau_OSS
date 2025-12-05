@@ -44,7 +44,16 @@ namespace QUẢN_LÝ_SINH_VIÊN
 
             BubbleSort(sortedData, "TenSV");
 
-            table = sortedData.CopyToDataTable();
+            if (sortedData.Count > 0)
+            {
+                table = sortedData.CopyToDataTable();
+                dgvQuantri.DataSource = table;
+            }
+            else
+            {
+                // Nếu không có dữ liệu, gán DataSource về null để làm trống bảng hiển thị
+                dgvQuantri.DataSource = null;
+            }
             dgvQuantri.DataSource = table; 
 
         }
@@ -60,7 +69,7 @@ namespace QUẢN_LÝ_SINH_VIÊN
             dgvQuantri.ReadOnly = true; 
             loaddata();            
             cbTimkiem_CheckedChanged(sender, e);
-            dgvQuantri.Columns["DiemTrungBinh"].HeaderText = "Điểm TB"; 
+           
         }
 
         private void dgv_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -272,6 +281,7 @@ namespace QUẢN_LÝ_SINH_VIÊN
         }
         private void BubbleSort(List<DataRow> data, string criteria)
         {
+          
             int n = data.Count;
             for (int i = 0; i < n - 1; i++)
             {
@@ -290,8 +300,20 @@ namespace QUẢN_LÝ_SINH_VIÊN
                 }
             }
 
-           
-            table = data.CopyToDataTable();
+
+            if (data.Count > 0)
+            {
+                table = data.CopyToDataTable();
+            }
+            else
+            {
+                // Xử lý khi không có dữ liệu
+                // Nếu bạn muốn giữ cấu trúc bảng nhưng không có dữ liệu, hãy dùng Clone() từ bảng gốc (nếu có biến bảng gốc)
+                // table = originalDataTable.Clone(); 
+
+                // Hoặc gán bằng null
+                table = null;
+            }
         }
 
         private void cbtieuchisx_SelectedIndexChanged(object sender, EventArgs e)
